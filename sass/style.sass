@@ -1,0 +1,92 @@
+$font: 'Poppins', sans-serif
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    padding-top: 8vh
+    font-family: $font
+    background-color: hsl(0, 0%, 98%)
+
+.container
+    width: 90%
+    margin: 0 auto
+
+.header
+    text-align: center
+    &__subtitle
+        font-size: 33px
+        font-weight: 200
+        color: hsl(234, 12%, 34%)
+    &__title
+        font-size: 33px
+        font-weight: 600
+        color: hsl(234, 12%, 34%)
+    &__paragraph
+        font-size: 15px
+        font-weight: 200
+        color: hsl(234, 12%, 34%)
+        margin: 1rem auto
+        max-width: 450px
+
+main
+    margin-top: 6vh
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 20px
+    padding: 0 15vw
+
+.box
+    width: 1fr
+    padding: 1rem
+    border-radius: 5px
+    box-shadow: 10px 10px 27px 0px rgba(0,0,0,0.12)
+    text-align: right
+    &__container
+        display: flex
+        flex-direction: column
+        gap: 20px
+    &__title
+        font-size: 20px
+        font-weight: 600
+        color: hsl(234, 12%, 34%)
+        margin: .6rem 0
+        text-align: left
+    &__paragraph
+        font-size: 14px
+        font-weight: 200
+        color: hsl(234, 12%, 34%)
+        max-width: 300px
+        text-align: left
+    &__icon
+        margin-top: 2.5rem
+    &--1
+        border-top: 4px solid hsl(180, 62%, 55%)
+        align-self: center
+    &--2
+        border-top: 4px solid hsl(0, 78%, 62%)
+        margin-bottom: 20px
+    &--3
+        border-top: 4px solid hsl(34, 97%, 64%)
+    &--4
+        border-top: 4px solid hsl(212, 86%, 64%)
+        align-self: center
+
+@media screen and (max-width: 375px)
+    .header
+        &__title, &__subtitle
+            font-size: 20px
+        &__paragraph
+            padding: 0 1rem
+    
+    main
+        grid-template-columns: 1fr
+        padding: 0
+        justify-items: center
+    
+    .box
+        width: 80vw
+        &--4
+            margin-bottom: 2rem
